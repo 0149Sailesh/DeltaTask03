@@ -1,0 +1,17 @@
+<%- include("partials/headerIn") %>
+<h1>
+	LIST OF USERS
+</h1>
+<%users.forEach(function(user){%>
+<%if(user._id!==appUser._id){%>
+	<li><%=user.username%>
+<form method="POST" action="/send">
+		<button name="receiverId" value="<%=user._id%>">
+			SEND
+	</button>
+</form></li>
+	
+<%}%>
+	
+<%})%>
+<%- include("partials/footerIn") %>

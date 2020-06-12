@@ -1,0 +1,26 @@
+<%- include("partials/headerIn") %>
+<div class="total">
+<h1 style="padding-left:10px;">
+	EVENTS CREATED
+</h1>
+	
+		<%invitations.forEach(function(invitation){%>
+	
+	<div class="message">
+		<br>
+	 <div>
+		 <b><em>Event</em></b>: <%=invitation.header%>
+	</div> 
+		<br>
+		<div>
+			<a href="/createdInvitations/<%=invitation._id%>">SHOW MORE</a>
+		</div>
+	<br>
+	<br>
+	</div>
+<%})%>
+	
+
+</div>
+
+<%- include("partials/footerIn") %>

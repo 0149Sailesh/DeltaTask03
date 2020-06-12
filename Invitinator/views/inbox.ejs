@@ -1,0 +1,29 @@
+<%- include("partials/headerIn") %>
+<div class="total">
+	<h1 style="padding-left:10px;">
+	INBOX
+</h1>
+
+	<% messages.forEach(function(message){%>
+	<div class="message">
+	<br>
+	<div>
+		<b><em>FROM</em></b>:  <%=message.senderUsername%>     
+	</div>
+	<br>
+	<div>
+		<b><em>EVENT</em></b>:  <%=message.header%>
+	</div>
+	<br>
+	<br>
+	<div>
+		 <a href="/inbox/<%=message._id%>">SHOW MORE</a>
+	</div>
+	<br>
+	<br>
+	</div>
+<%})%>
+</div>
+
+
+<%- include("partials/footerIn") %>

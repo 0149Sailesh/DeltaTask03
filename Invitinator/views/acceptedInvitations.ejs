@@ -1,0 +1,24 @@
+<%- include("partials/headerIn") %>
+<div class="total">
+	
+<h1 style="padding-left:10px;">
+	ACCEPTED INVITATIONS
+</h1>
+<div class="message" style="width=25%">
+	<br>
+	<% messages.forEach(function(message){%>
+<div>
+	<b><em>FROM</em></b>: <%=message.senderUsername%> 
+</div>
+	<br>
+	<div>
+	<b><em>EVENT</em></b>: <%=message.header%>	
+	</div>
+	
+	<br>
+<%})%>
+</div>	
+
+</div>
+
+<%- include("partials/footerIn") %>

@@ -1,0 +1,24 @@
+<%- include("partials/headerIn") %>
+<div class="total">
+ <h1 style="padding-left:10px;">
+	NOTIFICATIONS
+</h1>
+
+	<% accepted.forEach(function(accept){ %>
+	<div class="message" style="width: 30%;">
+	<br>
+	<br>
+	<%for(var i=0;i<users.length;i++){%>
+	<% if(String(users[i]._id)===accept.receiverId){ %>
+	<div><b><em><%= users[i].username %></em></b> has accepted your invite <a href="/viewResponse/<%=accept._id%>">View more</a></div> 
+<%}%>
+<%}%>
+	<br>
+	<br>
+		</div>
+<%})%>
+
+</div>
+
+
+<%- include("partials/footerIn") %>

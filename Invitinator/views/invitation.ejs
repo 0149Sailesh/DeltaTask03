@@ -1,0 +1,65 @@
+<%- include("partials/headerIn") %>
+<h1>
+	Create Invitation
+</h1>
+
+	<form action="/createInvitation" method="POST">
+		<div class="boxCreate">
+	<br>
+	<br>
+	<div>
+		<label for="Deadline">Deadline:</label>
+  <input type="date" id="deadline" name="deadline">
+		
+	</div>
+	<br>
+	<br>
+	
+	<div>
+		Font:<select name="font">
+			<option value="Arial, Helvetica, sans-serif">Arial</option>
+			<option value="Impact, Charcoal, sans-serif">Impact</option>
+			<option value="Tahoma, Geneva, sans-serif">Tahoma</option>
+			<option value="Verdana, Geneva, sans-serif">Verdana</option>
+			<option value="Georgia, serif">Georgia</option>
+			
+		</select>
+	</div>
+	<br>
+	<br>
+	<div>
+		Template:<select name="template">
+			<option value="https://www.publicdomainpictures.net/pictures/30000/velka/plain-white-background.jpg">Normal</option>
+			<option value="https://previews.123rf.com/images/sputanski/sputanski1505/sputanski150500029/40049510-happy-birthday-background-poster-with-balloons-and-flags-layered.jpg">Birthday</option>
+			<option value="https://previews.123rf.com/images/oapril/oapril1202/oapril120200014/12509968-wedding-background-with-beige-roses-and-floral-frame.jpg">Wedding</option>
+			<option value="https://i.pinimg.com/originals/3d/e5/d5/3de5d5e70960fc9147223308f477ae8f.jpg">Funeral</option>
+			
+		</select>
+	</div>
+	<br>
+	<br>
+	<div>
+		
+		<textarea rows = "5" cols = "50" name = "header">Header</textarea>
+	</div>
+	<br>
+	<br>
+	<div>
+		
+	<textarea rows = "5" cols = "50" name = "body">Body</textarea>
+	</div>
+	<br>
+	<br>
+	<div>
+		
+	<textarea rows = "5" cols = "50" name = "footer">Footer</textarea>
+		<br>
+		<br>
+		<button>
+			Save
+		</button>
+	</div>
+			</div>
+	</form>
+	
+<%- include("partials/footerIn") %>
